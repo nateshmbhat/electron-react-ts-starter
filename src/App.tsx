@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { IpcRenderer, IpcMessageEvent} from 'electron' ; 
+
+declare global {
+  interface Window {
+    require: any;
+  }
+}
+const electron  = window.require('electron') ; 
+let ipcRenderer : IpcRenderer  = electron.ipcRenderer ; 
+
+ipcRenderer.on('response' , (event:IpcMessageEvent , args:any)=>{
+  console.log(args);
+})
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={e=>ipcRenderer.send('channel' , {title : 'hi' , content : 'hello this is my message'})} >
+        Click me
+      </button>
     </div>
   );
 }
