@@ -20,6 +20,7 @@ function createWindow() {
         mainWindow.webContents.send('response' , {title : 'mymessage'  , data : 1 }) ; 
     })
 }
+
 app.on("ready", createWindow);
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {

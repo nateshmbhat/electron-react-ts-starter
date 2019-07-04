@@ -14,6 +14,8 @@ function createWindow() {
     mainWindow.on("closed", function () { return (mainWindow.destroy()); });
     electron_1.ipcMain.on('channel', function (event, msg) {
         console.log(msg);
+        console.log('hey hey hi hello');
+        mainWindow.webContents.send('response', { title: 'mymessage', data: 1 });
     });
 }
 electron_1.app.on("ready", createWindow);

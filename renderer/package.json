@@ -1,14 +1,16 @@
 {
   "name": "electron-react-ts-starter",
+  "description": "This is a boilerplate starter for an electron project that uses react with typescript and has some fixes applied for common bugs.",
   "version": "0.1.0",
   "main": "public/electron.js",
   "private": true,
   "dependencies": {
-    "semantic-ui-react": "^0.87.2",
     "electron": "^5.0.6",
-   "react": "^16.8.6",
+    "electron-reload": "^1.4.0",
+    "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
+    "semantic-ui-react": "^0.87.2",
     "typescript": "3.5.2"
   },
   "scripts": {
@@ -16,11 +18,10 @@
     "react-build": "react-scripts build",
     "react-test": "react-scripts test --env=jsdom",
     "react-eject": "react-scripts eject",
-    "electron-build": "npm run prebuild && electron-builder",
+    "electron-build": "electron-builder",
     "release": "npm react-build && electron-builder --publish=always",
-    "build": "npm run prebuild && npm react-build && npm electron-build",
-    "prebuild": "tsc ./src/electron.ts --outDir ./public",
-    "start": "npm run prebuild && concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+    "build": "npm react-build && npm electron-build",
+    "start": "cross-env BROWSER=none npm run react-start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,7 +41,7 @@
   "devDependencies": {
     "electron-builder": "^20.44.4",
     "electron-is-dev": "^1.1.0",
-    "wait-on": "^3.2.0" , 
+    "wait-on": "^3.2.0",
     "@types/jest": "24.0.15",
     "@types/node": "12.0.10",
     "@types/react": "16.8.22",
