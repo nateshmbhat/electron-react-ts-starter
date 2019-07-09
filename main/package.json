@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "./src/index.js",
   "scripts": {
-    "start": "concurrently \"tsc ./src/index.ts -w\"  \"nodemon --exec \"\"wait-on http://localhost:3000 && electron src\"\""  },
+    "start": "concurrently \"tsc ./src/index.ts -w\"  \"cross-env NODE_ENV=dev nodemon --exec \"\"wait-on http://localhost:3000 && electron src\"\""
+  },
   "author": "nateshmbhat",
   "dependencies": {
     "@types/electron": "^1.6.10",
@@ -11,6 +12,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
     "electron-is-dev": "^1.1.0",
     "nodemon": "^1.19.1",
     "typescript": "^3.5.2",
