@@ -1,4 +1,5 @@
 # electron-react-ts-starter 
+#### ( Works with Create-React-App )
 
 This is a boiler plate starter pack when starting an electron project which uses react with typescript. The code contains some bug fixes that are found when using react with electron and typescript and has auto monitoring of typescript changes to reload the electron app for faster development.
 

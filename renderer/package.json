@@ -10,7 +10,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "semantic-ui-react": "^0.87.2",
     "typescript": "3.5.2"
   },
   "scripts": {
@@ -49,7 +48,6 @@
     "concurrently": "^4.1.1",
     "cross-env": "^5.2.0",
     "@types/electron": "^1.6.10",
-    "@types/semantic-ui": "^2.2.7",
     "watch": "^1.0.2"
   }
 }

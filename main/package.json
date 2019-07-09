@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "./src/index.js",
   "scripts": {
-    "start": "concurrently \"tsc ./src/index.ts -w\"  \"NODE_ENV=dev nodemon --exec 'wait-on http://localhost:3000 && electron src'\" "
-  },
+    "start": "concurrently \"tsc ./src/index.ts -w\"  \"nodemon --exec \"\"wait-on http://localhost:3000 && electron src\"\""  },
   "author": "nateshmbhat",
   "dependencies": {
     "@types/electron": "^1.6.10",

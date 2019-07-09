@@ -1,12 +1,7 @@
 import React from 'react';
 import { IpcRenderer, IpcMessageEvent} from 'electron' ; 
+const electron  = window.require('electron') ;  // require electron like this in all the files. Don't Use import from 'electron' syntax for importing IpcRender from electron.
 
-declare global {
-  interface Window {
-    require: any;
-  }
-}
-const electron  = window.require('electron') ; 
 let ipcRenderer : IpcRenderer  = electron.ipcRenderer ; 
 
 ipcRenderer.on('response' , (event:IpcMessageEvent , args:any)=>{
