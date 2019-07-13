@@ -14,6 +14,7 @@ This is a boiler plate starter pack when starting an electron project which uses
 
 ```
 cd renderer
+npm install
 npm run start
 ```
 
@@ -21,5 +22,6 @@ npm run start
 
 ```
 cd main
+npm install
 npm run start
 ```
