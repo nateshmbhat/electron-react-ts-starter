@@ -17,7 +17,11 @@ This is a boiler plate starter pack when starting an electron project which uses
 
 ```js
 cd renderer
+<<<<<<< HEAD
 npm install // First time only
+=======
+npm install
+>>>>>>> 87a0900b2b9bc529abedd5059d5d9eb14b17bc07
 npm run start
 ```
 
@@ -25,6 +29,7 @@ npm run start
 
 ```js
 cd main
+<<<<<<< HEAD
 npm install // First time only
 npm run start
 ```
@@ -49,3 +54,8 @@ You will now have a full fledged application with the given icon waiting for you
 + In the `renderer/package.json` , use the `build` property to modify the settings for electron-builder. All assets and static files in your project should be present in the `assets` folder.
 + To get different installer types like 'msi' , 'appx' , '7z' , 'zip' etc , change the `target` property inside the `build` property in `renderer/package.json` . 
 + If you have nested structure of typescript files in the `main` folder , make sure that you copy all the generated javascript `.js` files into the `renderer/public/`  folder before building the react app (This would add the javascript files in the public folder into the build folder when building our react-app).
+=======
+npm install
+npm run start
+```
+>>>>>>> 87a0900b2b9bc529abedd5059d5d9eb14b17bc07
