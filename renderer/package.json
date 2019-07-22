@@ -2,24 +2,41 @@
   "name": "electron-react-ts-starter",
   "description": "This is a boilerplate starter for an electron project that uses react with typescript and has some fixes applied for common bugs.",
   "version": "0.1.0",
-  "main": "public/electron.js",
   "private": true,
+  "author": "nateshmbhat",
+  "homepage": "./",
+  "build": {
+    "appId": "com.example.myApplication",
+    "productName": "My Application",
+    "copyright": "Copyright © 2019 Natesh M Bhat",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "assets/app.ico"
+    }
+  },
   "dependencies": {
-    "electron": "^5.0.6",
-    "electron-reload": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "typescript": "3.5.2"
+    "typescript": "3.5.2",
+    "electron-is-dev": "^1.1.0"
   },
   "scripts": {
     "react-start": "react-scripts start",
     "react-build": "react-scripts build",
     "react-test": "react-scripts test --env=jsdom",
     "react-eject": "react-scripts eject",
+    "react-prebuild": "cp ../main/src/*.js public/",
     "electron-build": "electron-builder",
-    "release": "npm react-build && electron-builder --publish=always",
-    "build": "npm react-build && npm electron-build",
+    "release": "npm run react-prebuild && npm run react-build && electron-builder --publish=always",
+    "build": "npm run react-prebuild && npm run react-build && npm run electron-build",
     "start": "cross-env BROWSER=none npm run react-start"
   },
   "eslintConfig": {
@@ -38,8 +55,9 @@
     ]
   },
   "devDependencies": {
+    "electron": "^5.0.6",
+    "electron-reload": "^1.4.0",
     "electron-builder": "^20.44.4",
-    "electron-is-dev": "^1.1.0",
     "wait-on": "^3.2.0",
     "@types/jest": "24.0.15",
     "@types/node": "12.0.10",

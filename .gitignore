@@ -1,6 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-main/src/index.js
+main/src/electron.js
+renderer/build
+renderer/dist
 
 # dependencies
 node_modules/
@@ -84,3 +86,4 @@ typings/
 
 # next.js build output
 .next
+renderer/public/electron.js
