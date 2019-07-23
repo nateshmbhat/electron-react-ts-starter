@@ -33,7 +33,7 @@
     "react-build": "react-scripts build",
     "react-test": "react-scripts test --env=jsdom",
     "react-eject": "react-scripts eject",
-    "react-prebuild": "cp ../main/src/*.js public/",
+    "react-prebuild": "cross-env cp ../main/src/*.js public/",
     "electron-build": "electron-builder",
     "release": "npm run react-prebuild && npm run react-build && electron-builder --publish=always",
     "build": "npm run react-prebuild && npm run react-build && npm run electron-build",

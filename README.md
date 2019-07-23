@@ -38,14 +38,15 @@ cd renderer
 npm run release // or npm run build
 ```
 
-**DONE AND DUSTED !**  . 
+**Sit back and have a cub of Coffee while the app gets built**  . 
 
-You will now have a full fledged application with the given icon waiting for you in the `dist` folder.
+You will now have a full fledged application waiting for you in the `dist` folder.
 
 ---
 
 
 ### Misc And Extra Options  : 
++ If your app uses React Router , make sure you use `HashRouter` instead of `BrowserRouter` . 
 + In the `renderer/package.json` , use the `build` property to modify the settings for electron-builder. All assets and static files in your project should be present in the `assets` folder.
 + To get different installer types like 'msi' , 'appx' , '7z' , 'zip' etc , change the `target` property inside the `build` property in `renderer/package.json` . 
 + If you have nested structure of typescript files in the `main` folder , make sure that you copy all the generated javascript `.js` files into the `renderer/public/`  folder before building the react app (This would add the javascript files in the public folder into the build folder when building our react-app).

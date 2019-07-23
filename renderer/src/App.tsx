@@ -12,7 +12,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <button onClick={e=>ipcRenderer.send('channel' , {title : 'hi' , content : 'hello this is my message'})} >
-        Click Him
+        Click me
       </button>
     </div>
   );
