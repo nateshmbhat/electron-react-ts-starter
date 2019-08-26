@@ -51,5 +51,5 @@ You will now have a full fledged application waiting for you in the `dist` folde
 + To get different installer types like 'msi' , 'appx' , '7z' , 'zip' etc , change the `target` property inside the `build` property in `renderer/package.json` . 
 + If you have nested structure of typescript files in the `main` folder , make sure that you copy all the generated javascript `.js` files into the `renderer/public/`  folder before building the react app (This would add the javascript files in the public folder into the build folder when building our react-app).
 
-### Project I Built using this pack : 
-https://github.com/nateshmbhat/windows-terminal-tweaker
+### Project built using this pack : 
+[Windows Terminal Tweaker](https://github.com/nateshmbhat/windows-terminal-tweaker)
