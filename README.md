@@ -38,7 +38,7 @@ cd renderer
 npm run release // or npm run build
 ```
 
-**Sit back and have a cub of Coffee while the app gets built**  . 
+**Sit back and have a cup of Coffee while the app gets built**  . 
 
 You will now have a full fledged application waiting for you in the `dist` folder.
 
