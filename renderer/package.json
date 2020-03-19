@@ -22,10 +22,10 @@
     }
   },
   "dependencies": {
-    "react": "^16.8.6",
+    "react": "^16",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "typescript": "3.5.2",
+    "react-scripts": "^3",
+    "typescript": "^3",
     "electron-is-dev": "^1.1.0"
   },
   "scripts": {
@@ -55,16 +55,16 @@
     ]
   },
   "devDependencies": {
-    "electron": "^5.0.6",
+    "electron": "^8",
     "electron-reload": "^1.4.0",
-    "electron-builder": "^20.44.4",
-    "wait-on": "^3.2.0",
-    "@types/jest": "24.0.15",
-    "@types/node": "12.0.10",
-    "@types/react": "16.8.22",
-    "@types/react-dom": "16.8.4",
-    "concurrently": "^4.1.1",
-    "cross-env": "^5.2.0",
+    "electron-builder": "^22",
+    "wait-on": "^4",
+    "@types/jest": "^25",
+    "@types/node": "^13",
+    "@types/react": "^16",
+    "@types/react-dom": "^16",
+    "concurrently": "^5",
+    "cross-env": "^7",
     "@types/electron": "^1.6.10",
     "watch": "^1.0.2"
   }
