@@ -1,8 +1,8 @@
-import { BrowserWindow , app , ipcMain, IpcMessageEvent } from 'electron' ; 
-import * as isDev from "electron-is-dev" ; 
+import { BrowserWindow , app , ipcMain, IpcMainEvent } from 'electron'
+import * as isDev from "electron-is-dev"
 import * as path from 'path'
 
-let mainWindow : BrowserWindow ;
+let mainWindow : BrowserWindow
 
 function createWindow() {
     mainWindow = new BrowserWindow({ width: 900, height: 680 ,  webPreferences : {
@@ -15,12 +15,12 @@ function createWindow() {
     );
     mainWindow.on("closed", () => (mainWindow.destroy()));
 
-    ipcMain.on('channel' , (event : IpcMessageEvent , msg: any)=>{
+    ipcMain.on('channel' , (event : IpcMainEvent , msg: any)=>{
         console.log(msg)
-        mainWindow.webContents.send('response' , {title : 'mymessage'  , data : 1 }) ; 
+        mainWindow.webContents.send('response' , {title : 'mymessage'  , data : 1 })
     })
 }
-
+app.allowRendererProcessReuse = true;
 app.on("ready", createWindow);
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {
